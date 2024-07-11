@@ -1,5 +1,5 @@
-`<!DOCTYPE html>
-<html lang='en'>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +7,24 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <h1>Currency Exchanger</h1>
-        <form action="">
-            <label for="base currencies">Base Currency:</label>
-            <select name="base currincies" id="base currencies">
+        <form onsubmit="convertCurrency(event)">
+            <label for="base-currencies">Base Currency:</label>
+            <select name="base-currencies" id="base-currencies">
                 <option value="USD">USD (US Dollars)</option>
                 <option value="INR">INR (Indian Rupees)</option>
                 <option value="EUR">EUR (Euro)</option>
                 <option value="GBP">GBP (Pound Sterling)</option>
             </select>
             <br><br>
-            <label for="amount">Amount</label>
-            <input type="number" value="0.00">
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" value="0.00">
             <br><br>
-            <label for="quoted currency">Quoted Currency</label>
-            <select name="quoted currency" id="quoted currency">
+            <label for="quoted-currency">Quoted Currency:</label>
+            <select name="quoted-currency" id="quoted-currency">
                 <option value="USD">USD (US Dollars)</option>
                 <option value="INR">INR (Indian Rupees)</option>
                 <option value="EUR">EUR (Euro)</option>
@@ -32,5 +33,7 @@
             <br><br>
             <input type="submit" value="Submit">
         </form>
+        <br><br>
+        <div id="result"></div>
     </body>
 </html>
